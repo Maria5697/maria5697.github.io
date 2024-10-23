@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>NaVino - Выгодные предложения</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link href="./styles/reset.css" rel="stylesheet">
+    <link href="./styles/index.css" rel="stylesheet"> 
+    <link href="./styles/assets/buttons/nav_buttons.css" rel="stylesheet"> 
+    <link href="./styles/assets/buttons/filter_name.css" rel="stylesheet">
+    <link href="./styles/assets/buttons/option.css" rel="stylesheet">
+    <link href="./styles/assets/buttons/multiselect.css" rel="stylesheet">
+    <link href="./styles/assets/buttons/filter_number_button.css" rel="stylesheet">
+    <link href="./styles/assets/buttons/filter_text_button.css" rel="stylesheet">
+    <link href="./styles/assets/product-card.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="./styles/assets/icons/logo.svg" style="margin-left: 35px; margin-right: 10px;">
+            <h2 class="logo"><a href="/">NaVino</a></h2>
+            <ul class="header-navigation">
+                <li>
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" class="search" placeholder="Chateau Tamagne" style="padding-left: 40px;">
+                        <img src="./styles/assets/icons/search.svg" class="search-icon" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;">
+                    </div>
+                </li>
+                <li> <img src="./styles/assets/icons/geo.svg">
+                    <select class="option">
+                    <option>Москва</option>
+                    <option selected>Санкт-Петербург</option>
+                    </select>
+                </li> 
+                <li>
+                    <img src="./styles/assets/icons/person.svg">
+                    <a href="#">Войти</a>
+                </li>                     
+            </ul>
+        </div>
+
+        
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <ul>
+                <li><button class="button"><h4 a href="#">ПЕРСОНАЛЬНЫЕ ПОДБОРКИ</h4></button></li>
+                <li><button class="button button--color-active"><h4 a href="#">ВЫГОДНЫЕ ПРЕДЛОЖЕНИЯ</h4></button></li>
+                <li><button class="button"><h4 href="#">ДЕГУСТАЦИИ</h4></button></li>
+                <li><button class="button"><h4 href="#">ОБУЧЕНИЕ</h4></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container main-container">
+            <aside>
+                <div class="filter-block">
+                    <ul>
+                        <li><button class="filter-name"><h5>ТОРГОВАЯ СЕТЬ</h5></button></li>
+                        <li>
+                            <form>
+                                <div class="multiselect">
+                                <div class="selectBox" onclick="showCheckboxes()">
+                                    <select>
+                                    <option>Выберите магазин</option>
+                                    </select>
+                                    <div class="overSelect"></div>
+                                </div>
+                                <div id="checkboxes">
+                                    <label for="perekrestok">
+                                    <input type="checkbox" id="perekrestok"/>Перекресток</label>
+                                    <label for="aromatny-mir">
+                                    <input type="checkbox" id="aromatny-mir"/>Ароматный Мир</label>
+                                    <label for="lenta">
+                                    <input type="checkbox" id="lenta"/>Лента</label>
+                                    <label for="krasnoe-i-belye">
+                                    <input type="checkbox" id="krasnoe-i-belye"/>Красное и Белое</label>
+                                    <label for="winelab">
+                                    <input type="checkbox" id="winelab"/>ВинЛаб</label>
+                                    <label for="pyaterochka">
+                                    <input type="checkbox" id="pyaterochka"/>Пятерочка</label>
+                                    <label for="dixy">
+                                    <input type="checkbox" id="dixy"/>Дикси</label>
+                                </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li><button class="filter-name"><h5>ЦЕНА</h5></button></li>
+                        <li>
+                            <div class="price-range">
+                                <input class="filter_number_button" type="number" placeholder="ОТ">
+                                <span class="range-separator"><img src="./styles/assets/icons/separator.svg"></span>
+                                <input class="filter_number_button" type="number" placeholder="ДО">
+                            </div>
+                        </li>
+                        <li><button class="filter-name"><h5>РАЗМЕР СКИДКИ</h5></button></li>
+                        <li>
+                            <div class="discount-range">
+                                <input class="filter_number_button" type="number" placeholder="ОТ 1%">
+                                <span class="range-separator"><img src="./styles/assets/icons/separator.svg"></span>
+                                <input class="filter_number_button" type="number" placeholder="ДО 99%">
+                            </div>
+                        </li>
+                        <li><button class="filter-name"><h5>ТИП ВИНА</h5></button></li>
+                        <li>
+                            <div class="wine-type">
+                                <button class="filter_text_button">Тихое</button>
+                                <button class="filter_text_button">Игристое</button>
+                                <button class="filter_text_button">Крепленое</button>
+                                <button class="filter_text_button">Десертное</button>
+                            </div>
+                        </li>
+                        <li><button class="filter-name"><h5>ЦВЕТ ВИНА</h5></button></li>
+                        <li>
+                            <div class="wine-color">
+                                <button class="filter_text_button">Белое</button>
+                                <button class="filter_text_button">Красное</button>
+                                <button class="filter_text_button">Розовое</button>
+                                <button class="filter_text_button">Оранжевое</button>
+                            </div>
+                        </li>
+                        <li><button class="filter-name"><h5>СОДЕРЖАНИЕ САХАРА</h5></button></li>
+                        <li>                  
+                            <div class="sugar-content">
+                                <button class="filter_text_button">Сухое</button>
+                                <button class="filter_text_button">Полусухое</button>
+                                <button class="filter_text_button">Полусладкое</button>
+                                <button class="filter_text_button">Сладкое</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="products">
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img class="product-card__image" src="./styles/assets/icons/red-wine.svg" alt="Название вина">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">CHATEAU TAMAGNE PINOT NOIR 2019</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__rating-star">★</span>
+                            <span class="product-card__rating-value">4.5</span>
+                        </div>
+                        <div class="product-card__characteristics">
+                            <span class="product-card__characteristic">Красное</span>
+                            <span class="product-card__characteristic">Сухое</span>
+                            <span class="product-card__characteristic">Россия</span>
+                        </div>
+                        <div class="product-card__price-button-container">
+                            <p class="product-card__price">ЦЕНА ОТ 499 руб</p>
+                            <a href="page2.html" class="product-card__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img class="product-card__image" src="./styles/assets/icons/white-wine.svg" alt="Chateau Tamagne Chardonnay 2019">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">CHATEAU TAMAGNE CHARDONNAY 2019</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__rating-star">★</span>
+                            <span class="product-card__rating-value">4.5</span>
+                        </div>
+                        <div class="product-card__characteristics">
+                            <span class="product-card__characteristic">Белое</span>
+                            <span class="product-card__characteristic">Сухое</span>
+                            <span class="product-card__characteristic">Россия</span>
+                        </div>
+                        <div class="product-card__price-button-container">
+                            <p class="product-card__price">ЦЕНА ОТ 499 руб</p>
+                            <button class="product-card__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img class="product-card__image" src="./styles/assets/icons/red-wine.svg" alt="Chateau Tamagne Cabernet 2019">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">CHATEAU TAMAGNE CABERNET 2019</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__rating-star">★</span>
+                            <span class="product-card__rating-value">4.5</span>
+                        </div>
+                        <div class="product-card__characteristics">
+                            <span class="product-card__characteristic">Красное</span>
+                            <span class="product-card__characteristic">Сухое</span>
+                            <span class="product-card__characteristic">Россия</span>
+                        </div>
+                        <div class="product-card__price-button-container">
+                            <p class="product-card__price">ЦЕНА ОТ 499 руб</p>
+                            <button class="product-card__button">Подробнее</button>
+                        </div>
+                    </div>                 
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image-container">
+                        <img class="product-card__image" src="./styles/assets/icons/white-wine.svg" alt="Chateau Tamagne Chardonnay 2019">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">CHATEAU TAMAGNE CHARDONNAY 2019</h3>
+                        <div class="product-card__rating">
+                            <span class="product-card__rating-star">★</span>
+                            <span class="product-card__rating-value">4.5</span>
+                        </div>
+                        <div class="product-card__characteristics">
+                            <span class="product-card__characteristic">Белое</span>
+                            <span class="product-card__characteristic">Сухое</span>
+                            <span class="product-card__characteristic">Россия</span>
+                        </div>
+                        <div class="product-card__price-button-container">
+                            <p class="product-card__price">ЦЕНА ОТ 499 руб</p>
+                            <button class="product-card__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
